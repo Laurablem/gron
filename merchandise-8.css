@@ -1,0 +1,189 @@
+/* Overordnet wrapper for merchandise-siden */
+.page-merchandise-wrapper{
+    background: rgb(240,240,240,1);
+    position:relative;
+    color: #048F40;
+
+}
+
+
+/* Prikket baggrundslag bag indholdet */
+.page-merchandise-wrapper:before{
+    content:'';
+    display:block;
+    background-image:url('assets/img/dotted.svg');
+    background-repeat:repeat;
+    background-position:5px 5px;
+    background-attachment: fixed;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:0;
+}
+
+/* Text slideshow styling */
+
+/* Justerer overskriftsstørrelse i slideshow-komponenten */
+.textslideshow h3{
+    font-size:22px;
+}
+/* Opretter referencepunkt for pseudo-element-rammen */
+.textslideshow .textimg__slideshow{
+    position:relative;
+}
+/* Grøn dekorativ ramme bag slideshow-billede */
+.textslideshow .textimg__slideshow:before{
+    content:'';
+    display:block;
+    position:absolute;
+    top: -10px;
+    left: -10px;
+    height: 100%;
+    width: 100%;
+    border: 3px solid #048F40;   
+}
+@media (min-width: 576px) {
+    /* Giver mere luft omkring rammen på større skærme */
+    .textslideshow .textimg__slideshow:before{
+        top: -15px;
+        left: -15px;
+    }
+}
+/* Farvetema for tekst/billede-komponenten på merchandise-siden */
+.page-merchandise-wrapper .component.textimg{
+    color:#048F40;
+}
+
+/* Text module styling */
+/* Ensretter tekstfarve i tekstmoduler */
+.page-merchandise-wrapper .component.textmodule .text__wrap{
+    color:#048F40;
+}
+/* Merchkort styling */
+/* Wrapper for merchkort-elementer */
+.merchkort-wrapper {
+    position:relative;
+  	margin-bottom: 60px;
+}
+/* Sørger for at merchkort-billeder fylder containerbredden */
+.merchkort-wrapper img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Aktiv knap-style i merchkort (ældre selector) */
+.merchkort-item button.is-active {
+    background: #1e3f20;
+    color: #fff;
+}
+
+/*Banner link modul styling*/
+/* Farvetema for bannerlink-komponenten */
+.page-merchandise-wrapper .component.bannerlink{
+    color:#048F40;
+}
+
+.page-merchandise-wrapper .component.bannerlink .text-center{
+    margin-top: -30px;
+  	margin-bottom: 70px;
+}
+
+/* Merchkort navbar styling */
+
+.merchkort-navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  	gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  	max-width: 750px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+/* Standardstil for knapper i merchkort-navigation */
+.merchkort-navbar-button {
+    background:#04a64b;
+   	color: white;
+    width:150px;
+  	height: 50px;
+    transition:all 1s ease;
+  	border: none;
+    outline: none;
+  	margin-bottom: 10px;
+}
+
+/* Aktiv state for knap i merchkort-navigation */
+.merchkort-navbar-button.is-active {
+    background:#1e3f20;
+    width:180px;
+	height: 50px;
+}
+
+@media (max-width: 991px) {
+
+    .merchkort-navbar-button {
+        width: 110px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .merchkort-navbar-button.is-active {
+        width: 110px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .merchkort-navbar-button {
+        width: 90px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .merchkort-navbar-button.is-active {
+        width: 90px;
+        height: 35px;
+        font-size: 13px;
+    }
+}
+
+/*Triple slider */
+/* Tre kolonner pr. slide-item i triple slider */
+.image-gallery-triple .textimg__slideshow-item{
+    width:33.333%;
+    margin-right:10px;
+  	margin-bottom: 60px;
+}
+
+.page-merchandise-wrapper .component.triple_sider {
+    margin-top: 20px;
+}
+
+/* Reducerer whitespace i tekstmoduler på merchsiden */
+.page-merchandise-wrapper section.component.textmodule {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    min-height: auto;
+}
+
+/* Fjerner ekstra luft inde i tekstmodulet */
+.page-merchandise-wrapper section.component.textmodule .container,
+.page-merchandise-wrapper section.component.textmodule .text__wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* gør så overskriften og under-overskrift står tættere sammen */
+.page-merchandise-wrapper .gk-frontpage-banner h4.date {
+    line-height: 0.5;
+}
